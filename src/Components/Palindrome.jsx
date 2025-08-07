@@ -42,7 +42,7 @@ const isPalindrome = (str)=>{
   };
   return (
     <div className='w-[100%] min-h-screen bg-blue-500 flex items-center justify-center'>
-        <div className='flex flex-col items-center bg-white w-[70%] xl:w-[35%] xl:h-[30vh] rounded-md'>
+        <div className='flex flex-col items-center bg-white w-[100%] xl:w-[35%] xl:h-[30vh] rounded-md'>
             <h1 className='text-2xl font-bold mb-5 mt-2 p-2'>Palindrome Checker</h1>
             <input type='text' value={input} onChange={(e)=>{
                 return setInput(e.target.value)
