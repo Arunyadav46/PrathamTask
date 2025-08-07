@@ -41,18 +41,19 @@ const isPalindrome = (str)=>{
     setResult(check ? 'It is a Palindrome' : 'Not a Palindrome.');
   };
   return (
-    <div className='w-[100%] min-h-screen bg-blue-500 flex items-center justify-center'>
-        <div className='flex flex-col items-center bg-white w-[90%] xl:w-[35%] xl:h-[30vh] rounded-md'>
-            <h1 className='text-2xl font-bold mb-5 mt-2 p-2'>Palindrome Checker</h1>
-            <input type='text' value={input} onChange={(e)=>{
-                return setInput(e.target.value)
-            }} className='px-4 py-2 border-2 xl:w-[60%] rounded-md outline-none focus:ring-2 focus:ring-blue-500'  placeholder='Enter a number or word' />
-            <button onClick={handleCheck} className='mt-3 mb-2 xl:w-[60%] bg-blue-500 text-white px-3 py-2 rounded-md'>Check palindrome</button>
-            {result && (
-          <p className="mt-2 text-lg font-medium text-center text-gray-700">{result}</p>
-       )}
-        </div>
+    
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-indigo-500 to-purple-600 px-4">
+      <div className="bg-white p-8 rounded-2xl shadow-lg w-full max-w-md">
+        <h1 className="text-2xl font-bold text-center mb-6 text-gray-800">Palindrome Checker</h1>
+        <input type="text" value={input} onChange={(e) => setInput(e.target.value)}  placeholder="Enter a word or number"className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"/>
+        <button onClick={handleCheck}  className="mt-4 w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700 transition duration-300" > Check Palindrome</button>
+        {result && (
+          <p className="mt-6 text-lg font-medium text-center text-gray-700">{result}</p>
+        )}
+      </div>
     </div>
+
+  
   )
 }
 
